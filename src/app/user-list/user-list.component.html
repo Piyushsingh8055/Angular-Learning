@@ -1,0 +1,30 @@
+<h1 class="heading">{{title}}</h1>
+
+<button (click)="counter('minus')">--</button>
+
+
+<p>Count:{{count}}</p>
+<button (click)="counter('add')">++</button>
+<br> <br>
+<input type="text" name="user-name" value= {{name}}  disabled="{{disable}}">
+<hr>
+<input type="text" name="user-name" [value]= name  [disabled]=disable>
+
+<hr>
+<hr>
+<h1 *ngIf="show else elseblock"> Hello this is If Condition</h1>
+<ng-template #elseblock>
+    <h1> Else Condition </h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='red'"> 
+    <h1 style="color: red;">Red Color</h1>
+</ng-template>
+<ng-template [ngIf]="color==='green'"> <h1 style="color: green;">Green Color</h1></ng-template>
+<ng-template [ngIf]="color==='blue'"> <h1 style="color: blue;"> Blue Color</h1></ng-template>
+<ng-template [ngIf]="color==='yellow'"> <h1 style="color: yellow;">Yellow Color</h1></ng-template>
+
+
+
+
+
