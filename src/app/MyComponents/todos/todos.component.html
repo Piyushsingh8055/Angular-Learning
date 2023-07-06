@@ -1,0 +1,37 @@
+<ul *ngFor="let todo of todos" class="custom">
+    <li>{{todo.sno}} - {{todo.title}} - {{todo.desc}}</li>
+</ul>
+
+<h1 class="text-center">Events </h1>
+<button (click)="getname('Ram','Piyush')"> click me </button>
+<!-- <button (click)="checkfun()"> click me </button> -->
+
+<br/><br/>
+<br>
+<input type="text" #box (keyup)="checkfun(box.value)" placeholder="Event Keyup" >
+
+<br><br>
+
+<input type="text" #box1 (keydown)="checkfun(box1.value)" placeholder="Event Keydown" >
+
+<br><br> 
+<input type="text" #box2 (blur)="checkfun(box2.value)" placeholder="Event blur" >
+
+<br><br> 
+<input type="text" #box3 (input)="checkfun(box3.value)" placeholder="Event Input" >
+
+<h1 (mouseover)="checkfun('over')">Hello This is piyush</h1>
+<h1 (mousemove)="checkfun('run')">Hello This is piyush</h1>
+<h1 (mouseenter)="checkfun('enter ')">Hello This is piyush</h1>
+
+<br><br><br>
+
+
+
+<input type="text" #box5 
+(keyup)="getval(box5.value)" 
+name="name" 
+placeholder="Enter Name fh" />
+
+<br><br>
+<p>The value is: {{displayVal}} </p>
